@@ -4,7 +4,18 @@ import { fetchFormData } from '../actions'
 
 interface IFormProps {
     fetchFormData(): object,
-    state: object
+    state: {
+        formData: {
+            first_name: string,
+            last_name: string,
+            age: number
+        },
+        tasks: [
+            {
+                title: string
+            }
+        ]
+    }
 }
 
 class Form extends React.Component <IFormProps> {
