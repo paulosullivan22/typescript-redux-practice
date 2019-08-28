@@ -14,7 +14,7 @@ const tasks = [
     { title: "Task Three"},
 ]
 
-const App: React.FunctionComponent<TaskListProps> = ({ tasks }) => {
+const App: React.FC<TaskListProps> = ({ tasks }) => {
     return (
         <div>
             {tasks.map((el, i) => {

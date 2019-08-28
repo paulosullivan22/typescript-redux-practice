@@ -2,6 +2,7 @@ import React from 'react'
 
 import FunctionalComponent from './FunctionalComponent'
 import ClassComponent from './ClassComponent'
+import Form from './Form'
 
 class App extends React.Component {
     render() {
@@ -9,6 +10,8 @@ class App extends React.Component {
             <div>
                 <FunctionalComponent />
                 <ClassComponent />
+                <hr />
+                <Form />
             </div>
         )
     }

@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import { fetchTasks } from '../actions'
 
 interface iClassComponentProps {
-    fetchTasks(): object 
+    // state: object,
+    fetchTasks(): object
 }
 
 class ClassComponent extends React.Component <iClassComponentProps> {
@@ -12,15 +13,14 @@ class ClassComponent extends React.Component <iClassComponentProps> {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div>  
 
                 <p>Class Component</p>
 
-                {/* {this.props.state.tasks.map((el, i) => {
+                {/* {this.props.state.tasks.map((el: object, i: number) => {
                     return (
-                        <p key={i}>{el}</p>
+                        <p key={i}>{el.title}</p>
                     )
                 })} */}
             </div>
@@ -28,7 +28,7 @@ class ClassComponent extends React.Component <iClassComponentProps> {
     }
 }
 
-const mapStateToProps = (state: object) => {
+const mapStateToProps = (state: object): object => {
     return { state }
 }
 
